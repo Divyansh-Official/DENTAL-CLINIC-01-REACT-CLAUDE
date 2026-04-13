@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "slug": "why-flossing-matters",
+    "title": "Why Flossing Is More Important Than Brushing",
+    "excerpt": "Most people skip flossing thinking brushing is enough. Here's the science that proves otherwise — and the 60-second technique that protects your gums for life.",
+    "category": "Oral Hygiene",
+    "readTime": "4 min read",
+    "date": "March 28, 2025",
+    "author": "Dr. Arjun Sharma"
+  },
+  {
+    "id": 2,
+    "slug": "implants-vs-bridges",
+    "title": "Dental Implants vs Bridges: Which Is Right for You?",
+    "excerpt": "Both replace missing teeth, but they work very differently. A side-by-side breakdown of cost, longevity, procedure, and long-term oral health impact.",
+    "category": "Restorative",
+    "readTime": "6 min read",
+    "date": "March 14, 2025",
+    "author": "Dr. Arjun Sharma"
+  },
+  {
+    "id": 3,
+    "slug": "teeth-whitening-myths",
+    "title": "5 Teeth Whitening Myths — Debunked by a Dentist",
+    "excerpt": "Does whitening damage enamel? Are charcoal toothpastes safe? Is laser whitening permanent? We separate fact from viral fiction.",
+    "category": "Cosmetic",
+    "readTime": "5 min read",
+    "date": "February 22, 2025",
+    "author": "Dr. Arjun Sharma"
+  },
+  {
+    "id": 4,
+    "slug": "sugar-and-teeth",
+    "title": "Sugar and Your Teeth: It's Not What You Think",
+    "excerpt": "It's not sugar itself that causes cavities — it's the bacteria that feeds on it. Understanding this changes how you protect your teeth entirely.",
+    "category": "Nutrition",
+    "readTime": "4 min read",
+    "date": "February 8, 2025",
+    "author": "Dr. Arjun Sharma"
+  },
+  {
+    "id": 5,
+    "slug": "clear-aligners-guide",
+    "title": "The Complete Guide to Clear Aligners in 2025",
+    "excerpt": "Cost, timeline, maintenance, and what no one tells you before starting Invisalign or a similar system. Everything from a practitioner's perspective.",
+    "category": "Orthodontics",
+    "readTime": "8 min read",
+    "date": "January 30, 2025",
+    "author": "Dr. Arjun Sharma"
+  },
+  {
+    "id": 6,
+    "slug": "dental-anxiety",
+    "title": "Overcoming Dental Anxiety: A Practical Guide",
+    "excerpt": "Nearly 40% of people avoid the dentist due to fear. These evidence-backed strategies — including sedation options — can help you reclaim your oral health.",
+    "category": "Patient Care",
+    "readTime": "5 min read",
+    "date": "January 15, 2025",
+    "author": "Dr. Arjun Sharma"
+  }
+]

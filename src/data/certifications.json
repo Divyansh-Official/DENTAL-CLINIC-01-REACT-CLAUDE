@@ -1,0 +1,8 @@
+[
+  { "name": "AIIMS Delhi", "year": "2010", "type": "degree" },
+  { "name": "FICOI Certified", "year": "2014", "type": "fellowship" },
+  { "name": "IDA Member", "year": "2010", "type": "membership" },
+  { "name": "University of Pennsylvania", "year": "2016", "type": "training" },
+  { "name": "ITI Fellow", "year": "2018", "type": "fellowship" },
+  { "name": "ADA Member", "year": "2019", "type": "membership" }
+]
