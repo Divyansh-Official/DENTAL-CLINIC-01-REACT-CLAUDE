@@ -39,13 +39,30 @@ export default function DoctorProfile() {
           {/* Card frame */}
           <div className="relative bg-[#111] border border-white/8 rounded-2xl overflow-hidden aspect-[4/5] flex items-end">
             {/* Placeholder visual */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+
+            {/* <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
               <div className="w-32 h-32 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                 <Users size={56} className="text-white/20" />
               </div>
               <p className="text-[13px] font-semibold text-white/30 tracking-widest uppercase">Doctor Photo</p>
               <p className="text-[11px] text-white/20">{doctorData.name}</p>
-            </div>
+            </div> */}
+
+            <div className="absolute inset-0">
+              {doctorData.photo ? (
+                <img src={doctorData.photo} alt={doctorData.name}
+                 className="w-full h-full object-cover object-top"
+                 // style={{ filter: "grayscale(100%) contrast(1.05) brightness(0.85)" }}
+                 // 
+                 />
+                ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+                  <div className="w-32 h-32 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+                  <Users size={56} className="text-white/20" />
+                  </div>
+                  <p className="text-[13px] font-semibold text-white/30 tracking-widest uppercase">Doctor Photo</p>
+                  </div>
+                )} </div>
 
             {/* Bottom badge */}
             <div className="relative z-10 m-6 bg-white/8 backdrop-blur-xl border border-white/12 rounded-xl px-5 py-4 w-full">

@@ -67,12 +67,14 @@ export default function Navbar({ onBooking }: NavbarProps) {
             <Phone size={14} />
             +91 98765 43210
           </a>
+
           <button
             onClick={onBooking}
             className="bg-white text-black text-[13px] font-bold px-6 py-2.5 rounded-full hover:bg-white/90 active:scale-95 transition-all duration-200"
           >
             Book Now
           </button>
+          
         </div>
 
         {/* Hamburger */}
@@ -100,12 +102,14 @@ export default function Navbar({ onBooking }: NavbarProps) {
             {l.label}
           </button>
         ))}
+
         <button
           onClick={() => { setMobileOpen(false); onBooking(); }}
           className="mt-4 bg-white text-black font-bold px-10 py-4 rounded-full text-lg"
         >
           Book Appointment
         </button>
+
       </div>
     </>
   );

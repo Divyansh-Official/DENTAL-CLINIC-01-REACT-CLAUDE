@@ -14,6 +14,7 @@ import Footer from "../components/Footer";
 import BookingModal from "../components/BookingModal";
 import { EmergencyButton, WhatsAppButton } from "../components/EmergencyButton";
 
+
 export default function Home() {
   const [bookingOpen, setBookingOpen] = useState(false);
   const open = () => setBookingOpen(true);
@@ -23,7 +24,7 @@ export default function Home() {
       <EmergencyButton />
       <WhatsAppButton />
       <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
-      <Navbar onBooking={open} />
+      <Navbar onBooking={close} />
       <main>
         <Hero onBooking={open} />
         <StatsMarquee />

@@ -95,7 +95,7 @@ export default function Contact() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.03!2d76.7886!3d30.7408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedb3bc6ecb4f%3A0x20cbb39a272c3d4e!2sSector%2017%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: "grayscale(100%) invert(0.88) contrast(0.9)" }}
+              // style={{ border: 0, filter: "grayscale(100%) invert(0.88) contrast(0.9)" }}
               allowFullScreen
               loading="lazy"
             />
