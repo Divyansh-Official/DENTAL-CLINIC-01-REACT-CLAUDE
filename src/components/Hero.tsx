@@ -81,7 +81,9 @@ export default function Hero({ onBooking }: HeroProps) {
 
         {/* Description */}
         <p
-          className="text-[15px] leading-relaxed text-white/50 max-w-sm mb-10"
+          // className="text-[15px] leading-relaxed text-white/50 max-w-sm mb-10"
+                    className="text-[15px] leading-relaxed text-amber-500 max-w-sm mb-10"
+
           style={{ animation: "fadeSlideUp 0.6s 3.1s ease both" }}
         >
           A modern, digital, and innovative dental clinic focused on providing safe and effective treatments using the latest technology.
