@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Phone, MapPin, Mail, MessageCircle, Clock, ArrowUpRight } from "lucide-react";
+import doctor from "../data/clinic.json";
 
 const CONTACT_ITEMS = [
   { Icon: Phone,         label: "Phone",     value: "+91 98765 43210",        sub: "Mon–Sat, 9 AM – 8 PM" },
@@ -36,6 +37,12 @@ export default function Contact() {
     setTimeout(() => setSubmitted(false), 4000);
     (e.target as HTMLFormElement).reset();
   };
+
+  const mapSrc = doctor?.location
+  ? doctor.location.lat && doctor.location.lng
+    ? `https://www.google.com/maps?q=${doctor.location.lat},${doctor.location.lng}&z=15&output=embed`
+    : doctor.location.mapLink?.replace("/?q=", "/embed?q=")
+  : "";
 
   return (
     <section
@@ -89,7 +96,7 @@ export default function Contact() {
           </div>
 
           {/* Map embed */}
-          <div className="mt-8 rounded-xl overflow-hidden border border-white/8" style={{ height: 220 }}>
+          {/* <div className="mt-8 rounded-xl overflow-hidden border border-white/8" style={{ height: 220 }}>
             <iframe
               title="Clinic Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.03!2d76.7886!3d30.7408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedb3bc6ecb4f%3A0x20cbb39a272c3d4e!2sSector%2017%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1"
@@ -99,7 +106,40 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
             />
-          </div>
+          </div> */}
+
+          <div className="mt-8">
+  {/* Map */}
+  <div className="rounded-xl overflow-hidden border border-white/8" style={{ height: 220 }}>
+    {mapSrc && (
+      <iframe
+        title="Clinic Location"
+        src={mapSrc}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+      />
+    )}
+  </div>
+
+  {/* Address + Open Maps */}
+  <div className="mt-3 flex items-center justify-between gap-3">
+    <p className="text-[12px] text-[#8F8F8F]">
+      {doctor?.location?.address}
+    </p>
+
+    <a
+      href={doctor?.location?.mapLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[12px] font-semibold text-white hover:text-white/80 transition"
+    >
+      Open in Maps →
+    </a>
+  </div>
+</div>
         </div>
 
         {/* RIGHT — Contact form */}
@@ -110,7 +150,7 @@ export default function Contact() {
               <FormField label="Phone" placeholder="+91 XXXXX XXXXX" required type="tel" />
             </div>
             <FormField label="Email" placeholder="your@email.com" type="email" />
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
               <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#8F8F8F]">
                 Service Interest
               </label>
@@ -123,11 +163,12 @@ export default function Contact() {
                   <option key={s} value={s} className="bg-[#111]">{s}</option>
                 ))}
               </select>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-2">
-              <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#8F8F8F]">Message</label>
+              {/* <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#8F8F8F]">Message</label> */}
+              <label className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#8F8F8F]">Query</label>
               <textarea
-                rows={5}
+                rows={12}
                 placeholder="Describe your concern or question..."
                 className="bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-[13px] text-white placeholder:text-white/30 outline-none focus:border-white/30 transition-colors resize-none"
                 style={{ fontFamily: "Poppins, sans-serif" }}

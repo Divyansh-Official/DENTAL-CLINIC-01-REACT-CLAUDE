@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ArrowUpRight, ArrowRight, Clock, MapPin } from "lucide-react";
+import { ArrowUpRight, Clock, MapPin } from "lucide-react";
 
 interface HeroProps {
   onBooking: () => void;
@@ -39,17 +39,12 @@ export default function Hero({ onBooking }: HeroProps) {
 
       {/* Hero image — right half, grayscale, fades into dark background */}
       <div className="absolute right-0 top-0 bottom-0 w-[58%] md:w-[52%] pointer-events-none select-none">
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#111] via-[#0A0A0A]/65 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-52 z-10 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-28 z-10 bg-gradient-to-b from-[#0A0A0A] to-transparent" />
-        <img
-          // src="../images/hero.png"
-          src="https://tse1.explicit.bing.net/th/id/OIP.p_DLxJEBMIcIPs7kVgZsRAHaFf?w=1080&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
-          alt="Smiling patient at WhiteDental clinic"
-          className="w-full h-full object-cover object-[center_20%]"
-          // style={{ filter: "grayscale(100%) contrast(1.08) brightness(0.72)" }}
-        />
-      </div>
+  <img
+    src="../images/hero.png"
+    alt="Smiling patient at WhiteDental clinic"
+    className="w-full h-full object-cover object-[55%_20%] md:object-[70%_80%]"
+  />
+</div>
 
       {/* Main content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 pt-28 pb-12">
@@ -64,7 +59,7 @@ export default function Hero({ onBooking }: HeroProps) {
 
         {/* H1 — line-by-line reveal */}
         <h1 className="font-black text-white leading-[0.9] tracking-[-0.04em] text-[clamp(52px,9vw,120px)] mb-8 max-w-4xl">
-          {["Because", "your smile", "deserves", "the Best"].map((line, i) => (
+          {["Because your", "smile", "deserves", "the Best"].map((line, i) => (
             <div key={i} className="hero-line" ref={(el) => setRef(el as HTMLDivElement, i)}>
               <span className={i === 2 ? "text-[#8F8F8F]" : ""}>{line}</span>
             </div>
@@ -106,21 +101,27 @@ export default function Hero({ onBooking }: HeroProps) {
               <ArrowUpRight size={14} className="text-white" />
             </span>
           </button>
-          <button
+          {/* <button
             onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
-            className="flex items-center gap-2 text-[13px] font-semibold text-white/50 hover:text-white transition-colors"
+            className="flex items-center gap-3 text-[13px] font-semibold text-white/50 hover:text-white transition-colors"
           >
             Explore Services
             <ArrowRight size={15} />
-          </button>
+          </button> */}
         </div>
       </div>
 
       {/* Bottom info bar */}
       <div
-        className="relative z-10 px-6 md:px-12 pb-10 flex flex-col sm:flex-row gap-6 sm:gap-16"
-        style={{ animation: "fadeSlideUp 0.6s 3.5s ease both" }}
-      >
+  className="
+    relative z-10 px-6 md:px-2 pb-10
+    flex flex-col sm:flex-row gap-6 sm:gap-16
+
+    lg:absolute lg:right-[550px] lg:bottom-14
+    lg:flex lg:flex-row lg:items-center lg:gap-12 lg:text-right
+  "
+  style={{ animation: "fadeSlideUp 0.6s 3.5s ease both" }}
+>
         <div>
           <div className="flex items-center gap-1.5 text-[10px] tracking-[0.18em] uppercase text-[#8F8F8F] font-semibold mb-1">
             <Clock size={10} />
@@ -140,9 +141,9 @@ export default function Hero({ onBooking }: HeroProps) {
       {/* Scroll indicator */}
       <div className="absolute right-8 bottom-10 hidden lg:flex flex-col items-center gap-2 z-10">
         <div className="w-px h-16 bg-white/20 relative overflow-hidden">
-          <div className="absolute top-0 w-full bg-white" style={{ animation: "scrollLine 1.8s ease infinite", height: "40%" }} />
+          <div className="absolute top-0 w-full bg-white" style={{ animation: "scrollLine 1.8s  ease infinite", height: "40%" }} />
         </div>
-        <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 rotate-90 mt-2">Scroll</span>
+        <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 rotate-90 mt-4">Scroll</span>
       </div>
 
       <style>{`

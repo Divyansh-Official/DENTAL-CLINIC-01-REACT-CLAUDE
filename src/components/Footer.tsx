@@ -15,20 +15,20 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <p className="text-[24px] font-black tracking-[-0.04em] mb-3">
-            White<span className="text-[#8F8F8F]">Dental</span>
+            Surya Dental Care and <span className="text-[#8F8F8F]">Implant Clinic </span>
           </p>
           <p className="text-[14px] leading-relaxed text-[#8F8F8F] max-w-[260px] mb-6">
             Premium dental care in the heart of Chandigarh. Because your smile deserves the very best.
           </p>
           <div className="flex flex-col gap-2.5 text-[13px]">
             <a href="tel:+919876543210" className="flex items-center gap-2 text-[#8F8F8F] hover:text-black transition-colors">
-              <Phone size={13} /> +91 98765 43210
+              <Phone size={13} /> +91 98140 82355
             </a>
             <a href="mailto:hello@whitedental.in" className="flex items-center gap-2 text-[#8F8F8F] hover:text-black transition-colors">
-              <Mail size={13} /> hello@whitedental.in
+              <Mail size={13} /> suryadental411@gmail.com
             </a>
             <span className="flex items-center gap-2 text-[#8F8F8F]">
-              <MapPin size={13} /> SCO 145-146, Sector 17, Chandigarh
+              <MapPin size={13} /> Plot no. 411-A, Phase - 2, Industrial And Business Park, Chandigarh, India, Chandigarh
             </span>
           </div>
         </div>

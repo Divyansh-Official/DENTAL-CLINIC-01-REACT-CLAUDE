@@ -1,0 +1,89 @@
+{
+  "clinic_name": "Surya Dental Care and Implant Clinic",
+  "tagline": "Holistic Dental Care — Advanced. Precise. Personal.",
+  "motto": "Providing HOLISTIC DENTAL CARE. Every aspect of our health is interconnected and so is our dental health.",
+  "about": "With the most advanced equipment and complete sterilization, we are specialized in all aspects of dentistry with professional care and high degree of precision. Consultation and dental education is absolutely free.",
+  "established": "2013",
+  "google_place_id": "ChIJhcmf0YrsDzkRX4rf009bbxU",
+
+  "location": {
+    "lat": 30.6972319,
+    "lng": 76.7823294,
+    "address": "Plot No. 411/A, 1st Floor, Industrial & Business Park, Phase-2, Chandigarh – 160002",
+    "landmark": "Opposite Fountain Park",
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "country": "India",
+    "pincode": "160002",
+    "mapLink": "https://www.google.com/maps/dir/?api=1&destination=30.6962795%2C76.7899399",
+    "directionsLink": "https://www.google.com/maps/dir/?api=1&destination=30.6962795%2C76.7899399",
+    "embedMapSrc": "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJhcmf0YrsDzkRX4rf009bbxU"
+  },
+
+  "contact": {
+    "phone": "+91 98140 82355",
+    "phone_display": "+91 98140 82355",
+    "whatsapp": "+919814082355",
+    "email": "suryadental411@gmail.com",
+    "facebook": "https://www.facebook.com/suryadental411/",
+    "instagram": null,
+    "website": null
+  },
+
+  "timings": {
+    "monday":    { "open": "10:00", "close": "19:30", "is_open": true },
+    "tuesday":   { "open": "10:00", "close": "19:30", "is_open": true },
+    "wednesday": { "open": "10:00", "close": "19:30", "is_open": true },
+    "thursday":  { "open": "10:00", "close": "19:30", "is_open": true },
+    "friday":    { "open": "10:00", "close": "19:30", "is_open": true },
+    "saturday":  { "open": "10:00", "close": "19:30", "is_open": true },
+    "sunday":    { "open": null,    "close": null,    "is_open": false }
+  },
+
+  "doctor": {
+    "name": "Dr. Ankush Jindal",
+    "title": "BDS, MPH",
+    "qualifications": ["BDS – National Dental College & Hospital", "MPH – Punjab University, Chandigarh"],
+    "specialization": "Dentistry",
+    "experience_years": 13,
+    "bio": "With over 13 years of experience, Dr. Ankush Jindal excels in Dental Implants, Full Mouth Rehabilitation, Smile Designing, Cosmetic Dentistry, and Preventive Dentistry. He believes prevention is better than cure and keeps the clinic equipped with the latest dental technology.",
+    "memberships": ["Indian Dental Association", "Dental Council of India"],
+    "photo_url": null
+  },
+
+  "services": [
+    { "id": "implants",       "name": "Dental Implants",           "icon": "implant",   "description": "Titanium implant-supported restorations for a natural-looking permanent smile." },
+    { "id": "smile_design",   "name": "Smile Designing",           "icon": "smile",     "description": "Full cosmetic makeovers combining veneers, whitening and alignment." },
+    { "id": "rct",            "name": "Root Canal Treatment",      "icon": "root",      "description": "Single-sitting painless RCT with advanced rotary systems." },
+    { "id": "crowns",         "name": "Crowns & Bridges",          "icon": "crown",     "description": "Ceramic and zirconia crowns fabricated with digital precision." },
+    { "id": "whitening",      "name": "Teeth Whitening",           "icon": "whiten",    "description": "In-office laser whitening for instantly brighter smiles." },
+    { "id": "veneers",        "name": "Veneers",                   "icon": "veneer",    "description": "Ultra-thin porcelain veneers — virtually undetectable and stain-resistant." },
+    { "id": "orthodontics",   "name": "Orthodontics & Aligners",   "icon": "braces",    "description": "Braces and clear aligner therapy for all age groups." },
+    { "id": "scaling",        "name": "Scaling & Polishing",       "icon": "clean",     "description": "Professional deep cleaning to prevent gum disease." },
+    { "id": "extractions",    "name": "Tooth Extractions",         "icon": "extract",   "description": "Surgical and simple extractions including impacted wisdom teeth." },
+    { "id": "dentures",       "name": "Dentures & Prosthetics",    "icon": "denture",   "description": "Complete and partial dentures, acrylic and metal-based." },
+    { "id": "laser",          "name": "Laser Dentistry",           "icon": "laser",     "description": "Minimally invasive soft-tissue laser procedures." },
+    { "id": "flap_surgery",   "name": "Flap Surgery",              "icon": "surgery",   "description": "Periodontal flap surgeries for advanced gum disease management." },
+    { "id": "paediatric",     "name": "Paediatric Dentistry",      "icon": "child",     "description": "Gentle, child-friendly dental care from an early age." },
+    { "id": "fillings",       "name": "Composite Fillings",        "icon": "fill",      "description": "Tooth-coloured composite restorations — metal-free and durable." },
+    { "id": "full_rehab",     "name": "Full Mouth Rehabilitation", "icon": "rehab",     "description": "Comprehensive reconstruction for heavily worn or missing dentition." }
+  ],
+
+  "ratings": {
+    "justdial": { "score": 4.9, "count": 24 },
+    "practo":   { "score": 5.0, "count": 23 },
+    "google":   { "score": null, "count": null }
+  },
+
+  "gallery": {
+    "clinic_image_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=FILL_AFTER_PLACES_API_CALL&key=YOUR_API_KEY",
+    "street_view_url": "https://maps.googleapis.com/maps/api/streetview?size=800x400&location=30.6972319,76.7823294&key=YOUR_API_KEY",
+    "photos": []
+  },
+
+  "seo": {
+    "meta_title": "Surya Dental Care and Implant Clinic | Chandigarh",
+    "meta_description": "Best dental clinic in Chandigarh offering implants, smile design, RCT, whitening & more. Visit Dr. Ankush Jindal at Industrial Area Phase-2, opposite Fountain Park.",
+    "keywords": ["dental clinic chandigarh", "dental implants chandigarh", "dr ankush jindal", "smile design chandigarh", "root canal chandigarh", "teeth whitening chandigarh"]
+  }
+}
