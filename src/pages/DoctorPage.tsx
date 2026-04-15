@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BookingModal from "../components/BookingModal";
 import { EmergencyButton, WhatsAppButton } from "../components/EmergencyButton";
-import doctorData from "../data/doctor.json";
+import doctorData from "../data/mainDoctor.json";
 import certData from "../data/certifications.json";
 
 const TIMELINE = [

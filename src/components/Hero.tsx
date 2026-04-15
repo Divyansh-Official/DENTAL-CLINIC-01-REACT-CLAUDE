@@ -43,7 +43,8 @@ export default function Hero({ onBooking }: HeroProps) {
         <div className="absolute bottom-0 left-0 right-0 h-52 z-10 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-28 z-10 bg-gradient-to-b from-[#0A0A0A] to-transparent" />
         <img
-          src="../images/hero.png"
+          // src="../images/hero.png"
+          src="https://tse1.explicit.bing.net/th/id/OIP.p_DLxJEBMIcIPs7kVgZsRAHaFf?w=1080&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
           alt="Smiling patient at WhiteDental clinic"
           className="w-full h-full object-cover object-[center_20%]"
           // style={{ filter: "grayscale(100%) contrast(1.08) brightness(0.72)" }}
