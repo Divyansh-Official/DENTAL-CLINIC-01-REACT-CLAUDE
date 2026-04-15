@@ -1,8 +1,10 @@
 import { useRef, useEffect, useState } from "react";
 import { Plus, X, ArrowUpRight, Loader2 } from "lucide-react";
 import { useFAQ } from "../hooks/useFAQ";
-
-interface FaqProps { onBooking: () => void; }
+import type { FAQItem as FAQType } from "../hooks/useFAQ";
+interface FaqProps {
+  onBooking: () => void;
+}
 
 export default function FAQ({ onBooking }: FaqProps) {
   const ref = useRef<HTMLElement>(null);
@@ -12,10 +14,14 @@ export default function FAQ({ onBooking }: FaqProps) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) el.classList.add("visible"); },
+      ([e]) => {
+        if (e.isIntersecting) el.classList.add("visible");
+      },
       { threshold: 0.08 }
     );
+
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
@@ -31,17 +37,16 @@ export default function FAQ({ onBooking }: FaqProps) {
         <span className="w-8 h-px bg-[#8F8F8F]" />
         Common Questions
       </p>
+
       <h2 className="text-[clamp(36px,5vw,72px)] font-black tracking-[-0.04em] leading-[0.9] mb-14">
         Frequently Asked<br />Questions
       </h2>
 
-      {/* Two-column layout */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-start">
 
-        {/* Accordion */}
+        {/* FAQ LIST */}
         <div className="flex flex-col divide-y divide-[#E0E0E0]">
 
-          {/* Loading */}
           {loading && (
             <div className="flex items-center justify-center gap-3 py-16 text-[#8F8F8F]">
               <Loader2 size={18} className="animate-spin" />
@@ -49,14 +54,12 @@ export default function FAQ({ onBooking }: FaqProps) {
             </div>
           )}
 
-          {/* Error */}
           {!loading && error && (
             <p className="text-[13px] text-[#8F8F8F] py-10 text-center">
               Could not load FAQs right now.
             </p>
           )}
 
-          {/* FAQ items */}
           {!loading && !error && faqs.map((faq, i) => (
             <FAQItem
               key={i}
@@ -73,17 +76,20 @@ export default function FAQ({ onBooking }: FaqProps) {
           )}
         </div>
 
-        {/* Sticky CTA card — unchanged */}
+        {/* CTA CARD */}
         <div className="lg:sticky lg:top-24 bg-[#0A0A0A] text-white rounded-2xl p-8 md:p-10">
           <div className="w-14 h-14 bg-white/6 rounded-xl border border-white/10 flex items-center justify-center mb-6">
             <ArrowUpRight size={24} className="text-white/60" />
           </div>
+
           <h3 className="text-[26px] md:text-[30px] font-black tracking-[-0.03em] leading-tight mb-4">
             Still have<br />questions?
           </h3>
+
           <p className="text-[14px] leading-relaxed text-white/55 mb-8">
-            Our friendly team is available 7 days a week. Book a free 15-minute consultation — no commitment, no pressure.
+            Our friendly team is available 7 days a week. Book a free 15-minute consultation.
           </p>
+
           <button
             onClick={onBooking}
             className="w-full flex items-center justify-center gap-2 bg-white text-black font-bold text-[14px] py-4 rounded-full hover:bg-white/90 active:scale-95 transition-all duration-200"
@@ -91,24 +97,16 @@ export default function FAQ({ onBooking }: FaqProps) {
             Book Free Consultation
             <ArrowUpRight size={16} />
           </button>
-          <div className="flex flex-wrap gap-2 mt-6">
-            {["Free Consult", "No Wait", "Same-Day", "EMI Available"].map((chip) => (
-              <span
-                key={chip}
-                className="bg-white/6 border border-white/10 rounded-full px-3 py-1 text-[11px] font-semibold text-white/50"
-              >
-                {chip}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>
   );
 }
 
+/* ---------------- FAQ ITEM ---------------- */
+
 interface FAQItemProps {
-  faq: FAQItem;
+  faq: FAQType;
   isOpen: boolean;
   onToggle: () => void;
 }
@@ -120,11 +118,14 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
       >
-        <span className={`text-[15px] md:text-[16px] font-semibold transition-colors ${isOpen ? "text-black" : "text-black/80 group-hover:text-black"}`}>
+        <span className={`text-[15px] md:text-[16px] font-semibold ${
+          isOpen ? "text-black" : "text-black/80 group-hover:text-black"
+        }`}>
           {faq.q}
         </span>
+
         <span className={`w-7 h-7 flex-shrink-0 rounded-full border flex items-center justify-center transition-all duration-300 ${
-          isOpen ? "bg-black border-black rotate-0" : "border-[#E0E0E0] group-hover:border-black/40"
+          isOpen ? "bg-black border-black" : "border-[#E0E0E0]"
         }`}>
           {isOpen
             ? <X size={13} className="text-white" />
@@ -132,14 +133,163 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
           }
         </span>
       </button>
-      <div className={`faq-answer ${isOpen ? "open" : ""}`}>
+
+      {isOpen && (
         <p className="text-[14px] leading-[1.85] text-[#8F8F8F] pb-5 pr-10">
           {faq.a}
         </p>
-      </div>
+      )}
     </div>
   );
 }
+
+
+
+
+
+// import { useRef, useEffect, useState } from "react";
+// import { Plus, X, ArrowUpRight, Loader2 } from "lucide-react";
+// import { useFAQ, FAQItem as FAQType } from "../hooks/useFAQ";
+
+// interface FaqProps { onBooking: () => void; }
+
+// export default function FAQ({ onBooking }: FaqProps) {
+//   const ref = useRef<HTMLElement>(null);
+//   const [openIndex, setOpenIndex] = useState<number | null>(0);
+//   const { faqs, loading, error } = useFAQ();
+
+//   useEffect(() => {
+//     const el = ref.current;
+//     if (!el) return;
+//     const obs = new IntersectionObserver(
+//       ([e]) => { if (e.isIntersecting) el.classList.add("visible"); },
+//       { threshold: 0.08 }
+//     );
+//     obs.observe(el);
+//     return () => obs.disconnect();
+//   }, []);
+
+//   return (
+//     <section
+//       id="faq"
+//       ref={ref}
+//       className="section-reveal bg-white text-black px-6 md:px-12 py-20 md:py-28"
+//     >
+//       {/* Label */}
+//       <p className="flex items-center gap-3 text-[11px] tracking-[0.3em] uppercase text-[#8F8F8F] font-semibold mb-5">
+//         <span className="w-8 h-px bg-[#8F8F8F]" />
+//         Common Questions
+//       </p>
+//       <h2 className="text-[clamp(36px,5vw,72px)] font-black tracking-[-0.04em] leading-[0.9] mb-14">
+//         Frequently Asked<br />Questions
+//       </h2>
+
+//       {/* Two-column layout */}
+//       <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-start">
+
+//         {/* Accordion */}
+//         <div className="flex flex-col divide-y divide-[#E0E0E0]">
+
+//           {/* Loading */}
+//           {loading && (
+//             <div className="flex items-center justify-center gap-3 py-16 text-[#8F8F8F]">
+//               <Loader2 size={18} className="animate-spin" />
+//               <span className="text-[13px]">Loading questions...</span>
+//             </div>
+//           )}
+
+//           {/* Error */}
+//           {!loading && error && (
+//             <p className="text-[13px] text-[#8F8F8F] py-10 text-center">
+//               Could not load FAQs right now.
+//             </p>
+//           )}
+
+//           {/* FAQ items */}
+//           {!loading && !error && faqs.map((faq, i) => (
+//             <FAQItem
+//               key={i}
+//               faq={faq}
+//               isOpen={openIndex === i}
+//               onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+//             />
+//           ))}
+
+//           {!loading && !error && faqs.length === 0 && (
+//             <p className="text-[13px] text-[#8F8F8F] py-10 text-center">
+//               No questions available yet.
+//             </p>
+//           )}
+//         </div>
+
+//         {/* Sticky CTA card — unchanged */}
+//         <div className="lg:sticky lg:top-24 bg-[#0A0A0A] text-white rounded-2xl p-8 md:p-10">
+//           <div className="w-14 h-14 bg-white/6 rounded-xl border border-white/10 flex items-center justify-center mb-6">
+//             <ArrowUpRight size={24} className="text-white/60" />
+//           </div>
+//           <h3 className="text-[26px] md:text-[30px] font-black tracking-[-0.03em] leading-tight mb-4">
+//             Still have<br />questions?
+//           </h3>
+//           <p className="text-[14px] leading-relaxed text-white/55 mb-8">
+//             Our friendly team is available 7 days a week. Book a free 15-minute consultation — no commitment, no pressure.
+//           </p>
+//           <button
+//             onClick={onBooking}
+//             className="w-full flex items-center justify-center gap-2 bg-white text-black font-bold text-[14px] py-4 rounded-full hover:bg-white/90 active:scale-95 transition-all duration-200"
+//           >
+//             Book Free Consultation
+//             <ArrowUpRight size={16} />
+//           </button>
+//           <div className="flex flex-wrap gap-2 mt-6">
+//             {["Free Consult", "No Wait", "Same-Day", "EMI Available"].map((chip) => (
+//               <span
+//                 key={chip}
+//                 className="bg-white/6 border border-white/10 rounded-full px-3 py-1 text-[11px] font-semibold text-white/50"
+//               >
+//                 {chip}
+//               </span>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// interface FAQItemProps {
+//   // faq: FAQItem;
+//    faq: FAQType
+//   isOpen: boolean;
+//   onToggle: () => void;
+// }
+
+// function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
+//   return (
+//     <div className="py-1">
+//       <button
+//         onClick={onToggle}
+//         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
+//       >
+//         <span className={`text-[15px] md:text-[16px] font-semibold transition-colors ${isOpen ? "text-black" : "text-black/80 group-hover:text-black"}`}>
+//           {faq.q}
+//         </span>
+//         <span className={`w-7 h-7 flex-shrink-0 rounded-full border flex items-center justify-center transition-all duration-300 ${
+//           isOpen ? "bg-black border-black rotate-0" : "border-[#E0E0E0] group-hover:border-black/40"
+//         }`}>
+//           {isOpen
+//             ? <X size={13} className="text-white" />
+//             : <Plus size={13} className="text-black/60" />
+//           }
+//         </span>
+//       </button>
+//       <div className={`faq-answer ${isOpen ? "open" : ""}`}>
+//         <p className="text-[14px] leading-[1.85] text-[#8F8F8F] pb-5 pr-10">
+//           {faq.a}
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
 
 
 

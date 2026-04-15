@@ -19,7 +19,7 @@ export default function SplashScreen() {
       }`}
     >
       <h1 className="splash-logo text-4xl md:text-5xl font-black tracking-[-0.04em] text-white">
-        White<span className="text-[#8F8F8F]">Dental</span>
+        Surya Dental Clinic &<span className="text-[#8F8F8F]">Implant Clinic</span>
       </h1>
       <p className="splash-sub text-[11px] tracking-[0.4em] uppercase text-[#8F8F8F] mt-3">
         Premium Care · Chandigarh
