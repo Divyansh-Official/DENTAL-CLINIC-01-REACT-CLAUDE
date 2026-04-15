@@ -1,30 +1,31 @@
 [
   {
-    "id": "arjun-sharma",
-    "name": "Dr. Arjun Sharma",
-    "photo": "https://scontent.faip1-1.fna.fbcdn.net/v/t39.30808-6/299986578_375879674725797_2988481876035393580_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=miM0fyCyYFcQ7kNvwEss-J7&_nc_oc=Adpn1ebdABT6jSzz0jq-wYzb7WdsVfAMIL5ddvLwdnOHV6wnmUYGFiN5jv5ggokwWZE&_nc_zt=23&_nc_ht=scontent.faip1-1.fna&_nc_gid=dT1GIp9gmH3hiz9HRllHuA&_nc_ss=7a389&oh=00_Af2_mriPtS9DRUfB-x9nUn5FURlRHFKQeNwiI7T2hrmlPQ&oe=69E55D59",
-    "title": "BDS · MDS (Prosthodontics) · FICOI",
+    "id": "dr-surya-dental",
+    "name": "Dr. Ankush Jindal",
+    "photo": "https://scontent.faip1-1.fna.fbcdn.net/v/t39.30808-6/299986578_375879674725797_2988481876035393580_n.jpg",
+    "title": "BDS · Implantologist",
     "role": "Founder & Chief Dentist",
-    "experience": 14,
-    "bio": "With over 13 years of dedicated practice, Dr. Sharma combines clinical expertise with a compassionate approach. He has performed over 3,000 implant procedures and trained at AIIMS Delhi and the University of Pennsylvania. Known for his gentle technique and commitment to pain-free dentistry.",
+    "experience": 10,
+    "bio": "Dr. Surya is an experienced dental surgeon and implantologist dedicated to delivering high-quality, patient-centered care. With over a decade of clinical experience, he specializes in advanced dental treatments including implants, cosmetic dentistry, and painless root canal procedures. Known for his gentle approach and modern techniques, he focuses on ensuring comfort and long-term oral health for every patient.",
+    
     "specializations": [
-      { "title": "Prosthodontics",    "desc": "Implants & Restorations" },
-      { "title": "Cosmetic Dentistry","desc": "Veneers & Smile Design" },
-      { "title": "Endodontics",       "desc": "Root Canal Specialist" },
-      { "title": "Academic",          "desc": "Guest Faculty · PGI Chandigarh" }
+      { "title": "Dental Implants", "desc": "Single & Full Mouth Implants" },
+      { "title": "Root Canal Treatment", "desc": "Painless RCT Procedures" },
+      { "title": "Cosmetic Dentistry", "desc": "Smile Makeovers & Whitening" },
+      { "title": "General Dentistry", "desc": "Routine Care & Checkups" }
     ],
+
     "certifications": [
-      { "name": "AIIMS Delhi",                 "year": "2010", "type": "degree" },
-      { "name": "FICOI Certified",             "year": "2014", "type": "fellowship" },
-      { "name": "IDA Member",                  "year": "2010", "type": "membership" },
-      { "name": "University of Pennsylvania",  "year": "2016", "type": "training" },
-      { "name": "ITI Fellow",                  "year": "2018", "type": "fellowship" },
-      { "name": "ADA Member",                  "year": "2019", "type": "membership" }
+      { "name": "BDS Degree", "year": "2013", "type": "degree" },
+      { "name": "Implantology Certification", "year": "2016", "type": "training" },
+      { "name": "Indian Dental Association (IDA)", "year": "2013", "type": "membership" },
+      { "name": "Continuing Dental Education Programs", "year": "2020", "type": "training" }
     ],
+
     "achievements": [
-      { "value": "3,000+", "label": "Implants Placed" },
-      { "value": "14+",    "label": "Years Experience" },
-      { "value": "98%",    "label": "Success Rate" }
+      { "value": "2,000+", "label": "Happy Patients" },
+      { "value": "1,000+", "label": "Root Canals Done" },
+      { "value": "500+", "label": "Dental Implants" }
     ]
   }
 ]
