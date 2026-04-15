@@ -44,6 +44,14 @@ img, svg, video, canvas { max-width: none; }
 
 .modal-overlay { backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
 
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 

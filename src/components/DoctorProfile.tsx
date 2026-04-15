@@ -1,6 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import { Award, GraduationCap, Microscope, Users, X, Star, BookOpen, ArrowUpRight } from "lucide-react";
 import doctorsData from "../data/multipleDoctors.json";
+import { EmergencyButton, WhatsAppButton } from "./EmergencyButton";
+import BookingModal from "./BookingModal";
+import Navbar from "./Navbar";
 
 // ── Types ─────────────────────────────────────────────────────
 interface Cert         { name: string; year: string; type: string; }
@@ -23,6 +26,9 @@ function certIcon(type: string) {
 
 // ── Section ───────────────────────────────────────────────────
 export default function DoctorProfile() {
+
+    const [booking, setBooking] = useState(false);
+
   const ref = useRef<HTMLElement>(null);
   const [active, setActive] = useState<Doctor | null>(null);
 
@@ -47,6 +53,10 @@ export default function DoctorProfile() {
 
   return (
     <>
+     <EmergencyButton />
+          <WhatsAppButton />
+          <BookingModal isOpen={booking} onClose={() => setBooking(false)} />
+          <Navbar onBooking={() => setBooking(true)} />
       <section
         id="doctor"
         ref={ref}

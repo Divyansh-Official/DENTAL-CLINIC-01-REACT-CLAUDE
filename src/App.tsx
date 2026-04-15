@@ -3,9 +3,12 @@ import Cursor from "./components/Cursor";
 import SplashScreen from "./components/SplashScreen";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
-import DoctorPage from "./pages/DoctorPage";
+// import DoctorPage from "./pages/DoctorPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+// import DoctorProfile from "./components/DoctorProfile";
+import DoctorPage from "./pages/DoctorPage";
+// import DoctorPage from "./pages/DoctorPage";
 
 export default function App() {
   return (
@@ -23,7 +26,7 @@ export default function App() {
           <Route path="/contact"   element={<ContactPage />} />
 
         {/* 404 fallback */}
-        <Route path="*" element={<Home />} />
+        {/* <Route path="*" element={<Home />} /> */}
       </Routes>
     </BrowserRouter>
   );
