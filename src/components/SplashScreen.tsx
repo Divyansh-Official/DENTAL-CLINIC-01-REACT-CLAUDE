@@ -13,18 +13,35 @@ export default function SplashScreen() {
   if (gone) return null;
 
   return (
+    // <div
+    //   className={`fixed inset-0 z-[9000] bg-black flex flex-col items-center justify-center transition-opacity duration-700 ${
+    //     hide ? "opacity-0 pointer-events-none" : "opacity-100"
+    //   }`}
+    // >
+    //   <h1 className="splash-logo text-4xl md:text-5xl font-black tracking-[-0.04em] text-white">
+    //     Surya Dental Clinic &<span className="text-[#8F8F8F]">Implant Clinic</span>
+    //   </h1>
+    //   <p className="splash-sub text-[11px] tracking-[0.4em] uppercase text-[#8F8F8F] mt-3">
+    //     Premium Care · Chandigarh
+    //   </p>
+    //   <div className="splash-line-anim h-px bg-white mt-8" style={{ width: 0 }} />
+    // </div>
+
     <div
-      className={`fixed inset-0 z-[9000] bg-black flex flex-col items-center justify-center transition-opacity duration-700 ${
-        hide ? "opacity-0 pointer-events-none" : "opacity-100"
-      }`}
-    >
-      <h1 className="splash-logo text-4xl md:text-5xl font-black tracking-[-0.04em] text-white">
-        Surya Dental Clinic &<span className="text-[#8F8F8F]">Implant Clinic</span>
-      </h1>
-      <p className="splash-sub text-[11px] tracking-[0.4em] uppercase text-[#8F8F8F] mt-3">
-        Premium Care · Chandigarh
-      </p>
-      <div className="splash-line-anim h-px bg-white mt-8" style={{ width: 0 }} />
-    </div>
+  className={`fixed inset-0 z-[9000] bg-black flex flex-col items-center justify-center text-center px-4 transition-opacity duration-700 ${
+    hide ? "opacity-0 pointer-events-none" : "opacity-100"
+  }`}
+>
+  <h1 className="splash-logo text-4xl md:text-5xl font-black tracking-[-0.04em] text-white leading-tight">
+    Surya Dental Clinic &<br />
+    <span className="text-[#8F8F8F]">Implant Clinic</span>
+  </h1>
+
+  <p className="splash-sub text-[11px] tracking-[0.4em] uppercase text-[#8F8F8F] mt-3">
+    Premium Care · Chandigarh
+  </p>
+
+  <div className="splash-line-anim h-px bg-white mt-8 w-32 md:w-40" />
+</div>
   );
 }
